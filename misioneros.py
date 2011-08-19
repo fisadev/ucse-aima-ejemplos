@@ -11,3 +11,9 @@ class ProblemaMisioneros(Problem):
     def is_valid(self, s):
         return s[0] >= s[1] and (3 - s[0]) >= (3 - s[1]) and (0 <= s[0] <= 3) and (0 <= s[1] <= 3)
 
+    def result(self, s, a):
+        if s[2] == 0:
+            return (s[0] - a[0][1], s[1] - a[1][1], 1)
+        else:
+            return (s[0] + a[0][1], s[1] + a[1][1], 0)
+
