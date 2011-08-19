@@ -1,4 +1,4 @@
-from search import Problem
+from search import Problem, breadth_first_tree_search
 
 class ProblemaMisioneros(Problem):
     def __init__(self, initial, goal=None):
@@ -16,4 +16,9 @@ class ProblemaMisioneros(Problem):
             return (s[0] - a[0][1], s[1] - a[1][1], 1)
         else:
             return (s[0] + a[0][1], s[1] + a[1][1], 0)
+
+
+p1 = ProblemaMisioneros((3, 3, 0), (0, 0, 1))
+
+r = breadth_first_tree_search(p1)
 
