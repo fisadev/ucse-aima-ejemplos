@@ -5,4 +5,6 @@ class ProblemaMisioneros(Problem):
         Problem.__init__(self, initial, goal)
         self._actions = [('1c', (0,1)), ('1m', (1, 0)), ('2c', (0, 2)), ('2m', (2, 0)), ('1m1c', (1, 1))]
 
+    def actions(self, s):
+        return [a for a in self._actions if self._is_valid(self._result(s, a))]
 
