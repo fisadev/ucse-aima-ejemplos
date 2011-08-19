@@ -8,3 +8,6 @@ class ProblemaMisioneros(Problem):
     def actions(self, s):
         return [a for a in self._actions if self._is_valid(self._result(s, a))]
 
+    def is_valid(self, s):
+        return s[0] >= s[1] and (3 - s[0]) >= (3 - s[1]) and (0 <= s[0] <= 3) and (0 <= s[1] <= 3)
+
