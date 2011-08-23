@@ -21,7 +21,7 @@ class ProblemaMisioneros(Problem):
         '''Determina si un estado es valido o no.'''
         # un estado es valido si no hay mas canibales que misioneros en ninguna
         # orilla, y si las cantidades estan entre 0 y 3
-        return s[0] >= s[1] and (3 - s[0]) >= (3 - s[1]) and (0 <= s[0] <= 3) and (0 <= s[1] <= 3)
+        return (s[0] >= s[1] or s[0] == 0) and ((3 - s[0]) >= (3 - s[1]) or s[0] == 3) and (0 <= s[0] <= 3) and (0 <= s[1] <= 3)
 
     def result(self, s, a):
         '''Devuelve el estado resultante de aplicar una accion a un estado
