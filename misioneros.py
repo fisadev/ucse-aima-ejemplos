@@ -43,3 +43,6 @@ p1 = ProblemaMisioneros((3, 3, 0), (0, 0, 1))
 r = breadth_first_tree_search(p1)
 # esto nos devuelve el nodo meta del arbol. Podemos recorrer sus padres para
 # tener todo el camino de acciones
+while r:
+    print r.action
+    r = r.parent
